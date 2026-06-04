@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slay GYM — بواسطة ربيع Rabea</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ====== CURSOR ====== -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- ====== LOADER ====== -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">SLAY</div>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-slay">SLAY</span><span class="logo-gym">GYM</span>
+    <span class="logo-sub">by Rabea</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" class="nav-link active" data-page="home">الرئيسية</a>
+    <a href="#course" class="nav-link" data-page="course">الكورس</a>
+    <a href="#nutrition" class="nav-link" data-page="nutrition">التغذية</a>
+    <a href="#notes" class="nav-link" data-page="notes">الملاحظات</a>
+    <a href="#gallery" class="nav-link" data-page="gallery">المعرض</a>
+    <a href="#contact" class="nav-link" data-page="contact">تواصل</a>
+  </div>
+  <div class="nav-actions">
+    <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
+    <button class="nav-cta" onclick="scrollToSection('course')">ابدأ الآن</button>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-grid"></div>
+    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80" alt="gym" class="hero-img"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge animate-fade-up">💪 #1 GYM IN TOWN</div>
+    <h1 class="hero-title animate-fade-up delay-1">
+      <span class="title-slay">SLAY</span><br/>
+      <span class="title-gym">GYM</span>
+    </h1>
+    <p class="hero-sub animate-fade-up delay-2">حول جسمك • حول حياتك • حول مستقبلك</p>
+    <p class="hero-desc animate-fade-up delay-3">برنامج تدريبي متكامل صُمِّم بعناية فائقة بواسطة <strong>ربيع Rabea</strong> لمساعدتك على الوصول لأفضل نسخة من نفسك</p>
+    <div class="hero-btns animate-fade-up delay-4">
+      <button class="btn-primary" onclick="scrollToSection('course')"><i class="fas fa-dumbbell"></i> ابدأ التدريب</button>
+      <button class="btn-secondary" onclick="scrollToSection('nutrition')"><i class="fas fa-apple-alt"></i> النظام الغذائي</button>
+    </div>
+    <div class="hero-stats animate-fade-up delay-5">
+      <div class="stat"><span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span><p>عضو نشط</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span><p>تمرين</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="12">0</span><span class="stat-plus"></span><p>أسبوع كورس</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="98">0</span><span class="stat-plus">%</span><p>رضا الأعضاء</p></div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>اسحب للأسفل</span>
+  </div>
+</section>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>💪 SLAY GYM</span><span>🔥 NO PAIN NO GAIN</span><span>⚡ PUSH YOUR LIMITS</span><span>🏆 BE THE BEST</span><span>💯 TRAIN HARD</span><span>🎯 STAY FOCUSED</span><span>💪 SLAY GYM</span><span>🔥 NO PAIN NO GAIN</span><span>⚡ PUSH YOUR LIMITS</span><span>🏆 BE THE BEST</span><span>💯 TRAIN HARD</span><span>🎯 STAY FOCUSED</span>
+  </div>
+</div>
+
+<!-- ====== FEATURES ====== -->
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card" data-aos="fade-up" data-delay="0">
+        <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>تدريب احترافي</h3>
+        <p>برامج تدريبية مصممة من قبل خبراء معتمدين</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="100">
+        <div class="feature-icon"><i class="fas fa-apple-alt"></i></div>
+        <h3>تغذية متكاملة</h3>
+        <p>خطط غذائية متوازنة لدعم أهدافك الرياضية</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="200">
+        <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>متابعة صحية</h3>
+        <p>مراقبة مستمرة لتقدمك وصحتك العامة</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="300">
+        <div class="feature-icon"><i class="fas fa-users"></i></div>
+        <h3>مجتمع قوي</h3>
+        <p>انضم لآلاف الرياضيين وشاركهم رحلتك</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== COURSE SECTION ====== -->
+<section class="section course-section" id="course">
+  <div class="section-bg">
+    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1600&q=80" alt="gym bg" class="section-bg-img"/>
+    <div class="section-bg-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">💪 TRAINING PROGRAM</span>
+      <h2 class="section-title">كورس التمرين</h2>
+      <p class="section-desc">جدول تدريبي أسبوعي متكامل مصمم لبناء العضلات وحرق الدهون</p>
+    </div>
+
+    <!-- Week Tabs -->
+    <div class="week-tabs" data-aos="fade-up">
+      <button class="week-tab active" onclick="selectWeek(this, 'week1')">الأسبوع 1-4</button>
+      <button class="week-tab" onclick="selectWeek(this, 'week2')">الأسبوع 5-8</button>
+      <button class="week-tab" onclick="selectWeek(this, 'week3')">الأسبوع 9-12</button>
+    </div>
+
+    <!-- Days Grid -->
+    <div class="days-grid" id="daysGrid" data-aos="fade-up">
+      <!-- Day Cards -->
+      <div class="day-card" onclick="openDayModal('saturday')">
+        <div class="day-card-bg"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="chest"/></div>
+        <div class="day-card-overlay"></div>
+        <div class="day-card-content">
+          <span class="day-label">السبت</span>
+          <h3 class="day-title">الصدر والترايسبس</h3>
+          <div class="day-exercises-count"><i class="fas fa-list"></i> 6 تمارين</div>
+          <div class="day-muscles"><span>صدر</span><span>ترايسبس</span><span>أمامي كتف</span></div>
+          <button class="day-btn">عرض التمارين <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="day-number">01</div>
+      </div>
+
+      <div class="day-card" onclick="openDayModal('sunday')">
+        <div class="day-card-bg"><img src="https://images.unsplash.com/photo-1530822847156-5df684ec5933?w=400&q=80" alt="back"/></div>
+        <div class="day-card-overlay"></div>
+        <div class="day-card-content">
+          <span class="day-label">الأحد</span>
+          <h3 class="day-title">الظهر والبايسبس</h3>
+          <div class="day-exercises-count"><i class="fas fa-list"></i> 7 تمارين</div>
+          <div class="day-muscles"><span>ظهر</span><span>بايسبس</span><span>خلفي كتف</span></div>
+          <button class="day-btn">عرض التمارين <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="day-number">02</div>
+      </div>
+
+      <div class="day-card" onclick="openDayModal('monday')">
+        <div class="day-card-bg"><img src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&q=80" alt="legs"/></div>
+        <div class="day-card-overlay"></div>
+        <div class="day-card-content">
+          <span class="day-label">الاثنين</span>
+          <h3 class="day-title">الأرجل والسمانة</h3>
+          <div class="day-exercises-count"><i class="fas fa-list"></i> 8 تمارين</div>
+          <div class="day-muscles"><span>فخذ</span><span>ربلة</span><span>مؤخرة</span></div>
+          <button class="day-btn">عرض التمارين <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="day-number">03</div>
+      </div>
+
+      <div class="day-card rest-card" onclick="openDayModal('tuesday')">
+        <div class="day-card-bg"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80" alt="rest"/></div>
+        <div class="day-card-overlay"></div>
+        <div class="day-card-content">
+          <span class="day-label">الثلاثاء</span>
+          <h3 class="day-title">يوم الراحة النشطة</h3>
+          <div class="day-exercises-count"><i class="fas fa-spa"></i> استرخاء وتمدد</div>
+          <div class="day-muscles"><span>يوغا</span><span>تمدد</span><span>تنفس</span></div>
+          <button class="day-btn">التفاصيل <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="day-number rest-num">R</div>
+      </div>
+
+      <div class="day-card" onclick="openDayModal('wednesday')">
+        <div class="day-card-bg"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&q=80" alt="shoulders"/></div>
+        <div class="day-card-overlay"></div>
+        <div class="day-card-content">
+          <span class="day-label">الأربعاء</span>
+          <h3 class="day-title">الكتف والرقبة</h3>
+          <div class="day-exercises-count"><i class="fas fa-list"></i> 6 تمارين</div>
+          <div class="day-muscles"><span>كتف أمامي</span><span>جانبي</span><span>خلفي</span></div>
+          <button class="day-btn">عرض التمارين <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="day-number">05</div>
+      </div>
+
+      <div class="day-card" onclick="openDayModal('thursday')">
+        <div class="day-card-bg"><img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80" alt="cardio"/></div>
+        <div class="day-card-overlay"></div>
+        <div class="day-card-content">
+          <span class="day-label">الخميس</span>
+          <h3 class="day-title">الكارديو والبطن</h3>
+          <div class="day-exercises-count"><i class="fas fa-list"></i> 9 تمارين</div>
+          <div class="day-muscles"><span>قلب</span><span>بطن علوي</span><span>بطن سفلي</span></div>
+          <button class="day-btn">عرض التمارين <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="day-number">06</div>
+      </div>
+
+      <div class="day-card rest-card" onclick="openDayModal('friday')">
+        <div class="day-card-bg"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80" alt="rest"/></div>
+        <div class="day-card-overlay"></div>
+        <div class="day-card-content">
+          <span class="day-label">الجمعة</span>
+          <h3 class="day-title">راحة تامة</h3>
+          <div class="day-exercises-count"><i class="fas fa-moon"></i> استراحة أسبوعية</div>
+          <div class="day-muscles"><span>نوم</span><span>استرخاء</span><span>تغذية</span></div>
+          <button class="day-btn">نصائح الراحة <i class="fas fa-arrow-left"></i></button>
+        </div>
+        <div class="day-number rest-num">R</div>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-section" data-aos="fade-up">
+      <h3>تقدمك الأسبوعي</h3>
+      <div class="progress-bars">
+        <div class="progress-item">
+          <div class="progress-label"><span>الصدر</span><span>75%</span></div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="75"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>الظهر</span><span>60%</span></div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="60"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>الأرجل</span><span>85%</span></div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>الكتف</span><span>50%</span></div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="50"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>البطن</span><span>70%</span></div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="70"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DAY MODAL ====== -->
+<div class="modal-overlay" id="dayModal" onclick="closeDayModal(event)">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeDayModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-header" id="modalHeader"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ====== NUTRITION SECTION ====== -->
+<section class="section nutrition-section" id="nutrition">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">🥗 NUTRITION PLAN</span>
+      <h2 class="section-title">النظام الغذائي</h2>
+      <p class="section-desc">خطة غذائية شاملة لدعم تدريباتك وتحقيق أهدافك</p>
+    </div>
+
+    <!-- Calorie Calculator -->
+    <div class="calorie-calc" data-aos="fade-up">
+      <div class="calc-header"><i class="fas fa-calculator"></i> حاسبة السعرات الحرارية</div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="calc-group">
+            <label>الوزن (كجم)</label>
+            <input type="number" id="calcWeight" placeholder="70" min="40" max="200"/>
+          </div>
+          <div class="calc-group">
+            <label>الطول (سم)</label>
+            <input type="number" id="calcHeight" placeholder="175" min="140" max="220"/>
+          </div>
+          <div class="calc-group">
+            <label>العمر</label>
+            <input type="number" id="calcAge" placeholder="25" min="15" max="80"/>
+          </div>
+          <div class="calc-group">
+            <label>الجنس</label>
+            <select id="calcGender">
+              <option value="male">ذكر</option>
+              <option value="female">أنثى</option>
+            </select>
+          </div>
+          <div class="calc-group">
+            <label>مستوى النشاط</label>
+            <select id="calcActivity">
+              <option value="1.2">خامل</option>
+              <option value="1.375">نشاط خفيف</option>
+              <option value="1.55" selected>نشاط متوسط</option>
+              <option value="1.725">نشاط عالي</option>
+              <option value="1.9">رياضي محترف</option>
+            </select>
+          </div>
+          <div class="calc-group">
+            <label>الهدف</label>
+            <select id="calcGoal">
+              <option value="lose">خسارة وزن</option>
+              <option value="maintain" selected>الحفاظ على الوزن</option>
+              <option value="gain">زيادة كتلة عضلية</option>
+            </select>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calculateCalories()"><i class="fas fa-fire"></i> احسب الآن</button>
+        <div class="calc-result" id="calcResult"></div>
+      </div>
+    </div>
+
+    <!-- Macros Display -->
+    <div class="macros-section" data-aos="fade-up">
+      <h3 class="macros-title">توزيع المغذيات الكبرى</h3>
+      <div class="macros-grid">
+        <div class="macro-card protein">
+          <div class="macro-icon"><i class="fas fa-drumstick-bite"></i></div>
+          <div class="macro-circle">
+            <svg viewBox="0 0 100 100"><circle class="macro-bg-circle" cx="50" cy="50" r="40"/><circle class="macro-fill-circle protein-circle" cx="50" cy="50" r="40" stroke-dasharray="150 251"/></svg>
+            <span>40%</span>
+          </div>
+          <h4>بروتين</h4>
+          <p>160 جرام / يوم</p>
+        </div>
+        <div class="macro-card carbs">
+          <div class="macro-icon"><i class="fas fa-bread-slice"></i></div>
+          <div class="macro-circle">
+            <svg viewBox="0 0 100 100"><circle class="macro-bg-circle" cx="50" cy="50" r="40"/><circle class="macro-fill-circle carbs-circle" cx="50" cy="50" r="40" stroke-dasharray="125 251"/></svg>
+            <span>35%</span>
+          </div>
+          <h4>كربوهيدرات</h4>
+          <p>280 جرام / يوم</p>
+        </div>
+        <div class="macro-card fats">
+          <div class="macro-icon"><i class="fas fa-fish"></i></div>
+          <div class="macro-circle">
+            <svg viewBox="0 0 100 100"><circle class="macro-bg-circle" cx="50" cy="50" r="40"/><circle class="macro-fill-circle fats-circle" cx="50" cy="50" r="40" stroke-dasharray="63 251"/></svg>
+            <span>25%</span>
+          </div>
+          <h4>دهون صحية</h4>
+          <p>78 جرام / يوم</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meals Grid -->
+    <div class="meals-title-row" data-aos="fade-up">
+      <h3>وجبات اليوم</h3>
+      <div class="meal-filter">
+        <button class="meal-filter-btn active" onclick="filterMeals(this,'all')">الكل</button>
+        <button class="meal-filter-btn" onclick="filterMeals(this,'breakfast')">فطور</button>
+        <button class="meal-filter-btn" onclick="filterMeals(this,'lunch')">غداء</button>
+        <button class="meal-filter-btn" onclick="filterMeals(this,'dinner')">عشاء</button>
+        <button class="meal-filter-btn" onclick="filterMeals(this,'snack')">سناك</button>
+      </div>
+    </div>
+    <div class="meals-grid" id="mealsGrid" data-aos="fade-up">
+
+      <div class="meal-card" data-type="breakfast" onclick="openMealModal('breakfast1')">
+        <div class="meal-img-wrap"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="breakfast"/></div>
+        <div class="meal-badge breakfast-badge">🌅 فطور</div>
+        <div class="meal-info">
+          <h4>فطور البطل</h4>
+          <div class="meal-macros-mini">
+            <span><i class="fas fa-fire"></i> 520 كالوري</span>
+            <span><i class="fas fa-drumstick-bite"></i> 35ج بروتين</span>
+          </div>
+          <div class="meal-time"><i class="fas fa-clock"></i> 7:00 - 8:00 ص</div>
+          <button class="meal-recipe-btn">الوصفة والمكونات <i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+
+      <div class="meal-card" data-type="snack" onclick="openMealModal('snack1')">
+        <div class="meal-img-wrap"><img src="https://images.unsplash.com/photo-1517093602195-b40af9929bca?w=400&q=80" alt="snack"/></div>
+        <div class="meal-badge snack-badge">⚡ سناك</div>
+        <div class="meal-info">
+          <h4>وجبة ما قبل التمرين</h4>
+          <div class="meal-macros-mini">
+            <span><i class="fas fa-fire"></i> 280 كالوري</span>
+            <span><i class="fas fa-drumstick-bite"></i> 20ج بروتين</span>
+          </div>
+          <div class="meal-time"><i class="fas fa-clock"></i> 10:00 - 11:00 ص</div>
+          <button class="meal-recipe-btn">الوصفة والمكونات <i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+
+      <div class="meal-card" data-type="lunch" onclick="openMealModal('lunch1')">
+        <div class="meal-img-wrap"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80" alt="lunch"/></div>
+        <div class="meal-badge lunch-badge">☀️ غداء</div>
+        <div class="meal-info">
+          <h4>غداء البناء العضلي</h4>
+          <div class="meal-macros-mini">
+            <span><i class="fas fa-fire"></i> 680 كالوري</span>
+            <span><i class="fas fa-drumstick-bite"></i> 55ج بروتين</span>
+          </div>
+          <div class="meal-time"><i class="fas fa-clock"></i> 1:00 - 2:00 م</div>
+          <button class="meal-recipe-btn">الوصفة والمكونات <i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+
+      <div class="meal-card" data-type="snack" onclick="openMealModal('snack2')">
+        <div class="meal-img-wrap"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=400&q=80" alt="protein"/></div>
+        <div class="meal-badge snack-badge">⚡ سناك</div>
+        <div class="meal-info">
+          <h4>سموذي البروتين</h4>
+          <div class="meal-macros-mini">
+            <span><i class="fas fa-fire"></i> 340 كالوري</span>
+            <span><i class="fas fa-drumstick-bite"></i> 30ج بروتين</span>
+          </div>
+          <div class="meal-time"><i class="fas fa-clock"></i> 4:00 - 5:00 م</div>
+          <button class="meal-recipe-btn">الوصفة والمكونات <i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+
+      <div class="meal-card" data-type="dinner" onclick="openMealModal('dinner1')">
+        <div class="meal-img-wrap"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80" alt="dinner"/></div>
+        <div class="meal-badge dinner-badge">🌙 عشاء</div>
+        <div class="meal-info">
+          <h4>عشاء الاسترداد</h4>
+          <div class="meal-macros-mini">
+            <span><i class="fas fa-fire"></i> 480 كالوري</span>
+            <span><i class="fas fa-drumstick-bite"></i> 45ج بروتين</span>
+          </div>
+          <div class="meal-time"><i class="fas fa-clock"></i> 7:00 - 8:00 م</div>
+          <button class="meal-recipe-btn">الوصفة والمكونات <i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+
+      <div class="meal-card" data-type="snack" onclick="openMealModal('snack3')">
+        <div class="meal-img-wrap"><img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400&q=80" alt="night snack"/></div>
+        <div class="meal-badge snack-badge">🌛 سناك ليلي</div>
+        <div class="meal-info">
+          <h4>قبل النوم</h4>
+          <div class="meal-macros-mini">
+            <span><i class="fas fa-fire"></i> 200 كالوري</span>
+            <span><i class="fas fa-drumstick-bite"></i> 25ج بروتين</span>
+          </div>
+          <div class="meal-time"><i class="fas fa-clock"></i> 10:00 م</div>
+          <button class="meal-recipe-btn">الوصفة والمكونات <i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Supplements -->
+    <div class="supplements-section" data-aos="fade-up">
+      <h3>المكملات الغذائية الموصى بها</h3>
+      <div class="supps-grid">
+        <div class="supp-card"><div class="supp-icon">🥛</div><h4>واي بروتين</h4><p>25-30 جرام بعد التمرين مباشرة</p><span class="supp-timing">بعد التمرين</span></div>
+        <div class="supp-card"><div class="supp-icon">💊</div><h4>كرياتين</h4><p>5 جرام يومياً مع الماء</p><span class="supp-timing">أي وقت</span></div>
+        <div class="supp-card"><div class="supp-icon">☕</div><h4>كافيين</h4><p>200 ملج قبل التمرين بـ30 دقيقة</p><span class="supp-timing">قبل التمرين</span></div>
+        <div class="supp-card"><div class="supp-icon">🔴</div><h4>أوميجا 3</h4><p>2-3 كبسول مع الأكل</p><span class="supp-timing">مع الوجبة</span></div>
+        <div class="supp-card"><div class="supp-icon">☀️</div><h4>فيتامين D3</h4><p>2000-5000 وحدة يومياً</p><span class="supp-timing">الصباح</span></div>
+        <div class="supp-card"><div class="supp-icon">💤</div><h4>ماغنيسيوم</h4><p>400 ملج قبل النوم</p><span class="supp-timing">قبل النوم</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MEAL MODAL ====== -->
+<div class="modal-overlay" id="mealModal" onclick="closeMealModal(event)">
+  <div class="modal-box wide-modal" id="mealModalBox">
+    <button class="modal-close" onclick="closeMealModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-header" id="mealModalHeader"></div>
+    <div class="modal-body" id="mealModalBody"></div>
+  </div>
+</div>
+
+<!-- ====== NOTES SECTION ====== -->
+<section class="section notes-section" id="notes">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">📝 EXTRA TIPS</span>
+      <h2 class="section-title">الملاحظات الإضافية</h2>
+      <p class="section-desc">نصائح ذهبية تكمل رحلتك نحو الجسم المثالي</p>
+    </div>
+
+    <!-- Sleep Section -->
+    <div class="note-section-block" data-aos="fade-up">
+      <div class="note-block-header" onclick="toggleNoteBlock(this)">
+        <div class="note-block-icon sleep-icon"><i class="fas fa-moon"></i></div>
+        <div class="note-block-info">
+          <h3>ساعات النوم المثالية</h3>
+          <p>النوم هو وقت بناء العضلات الحقيقي</p>
+        </div>
+        <div class="note-block-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="note-block-body active">
+        <div class="sleep-visual">
+          <div class="sleep-clock">
+            <div class="sleep-info">
+              <div class="sleep-hour">8</div>
+              <div class="sleep-label">ساعات مثالية</div>
+            </div>
+          </div>
+          <div class="sleep-stages">
+            <div class="sleep-stage s1"><span class="stage-name">نوم خفيف</span><span class="stage-pct">20%</span><div class="stage-bar"><div class="stage-fill" style="width:20%;background:#f59e0b"></div></div></div>
+            <div class="sleep-stage s2"><span class="stage-name">نوم عميق</span><span class="stage-pct">50%</span><div class="stage-bar"><div class="stage-fill" style="width:50%;background:#ef4444"></div></div></div>
+            <div class="sleep-stage s3"><span class="stage-name">REM</span><span class="stage-pct">30%</span><div class="stage-bar"><div class="stage-fill" style="width:30%;background:#8b5cf6"></div></div></div>
+          </div>
+        </div>
+        <div class="sleep-tips">
+          <div class="sleep-tip"><i class="fas fa-check-circle"></i><p>نَم في غرفة مظلمة وباردة (18-20 درجة)</p></div>
+          <div class="sleep-tip"><i class="fas fa-check-circle"></i><p>أغلق الشاشات قبل النوم بساعة</p></div>
+          <div class="sleep-tip"><i class="fas fa-check-circle"></i><p>تناول ماغنيسيوم أو الحليب قبل النوم</p></div>
+          <div class="sleep-tip"><i class="fas fa-check-circle"></i><p>استيقظ في نفس الوقت يومياً لتنظيم الساعة البيولوجية</p></div>
+          <div class="sleep-tip"><i class="fas fa-times-circle bad"></i><p>تجنب الكافيين بعد الساعة 4 مساءً</p></div>
+          <div class="sleep-tip"><i class="fas fa-times-circle bad"></i><p>لا تتمرن قبل النوم بأقل من ساعتين</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extra Exercises -->
+    <div class="note-section-block" data-aos="fade-up">
+      <div class="note-block-header" onclick="toggleNoteBlock(this)">
+        <div class="note-block-icon extra-icon"><i class="fas fa-running"></i></div>
+        <div class="note-block-info">
+          <h3>التمارين الإضافية</h3>
+          <p>أنشطة تكميلية ترفع من مستوى لياقتك</p>
+        </div>
+        <div class="note-block-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="note-block-body">
+        <div class="extra-exercises-grid">
+          <div class="extra-ex-card" onclick="openExtraModal('hiit')">
+            <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=300&q=80" alt="hiit"/>
+            <div class="extra-ex-overlay">
+              <h4>HIIT</h4>
+              <p>تدريب متقطع عالي الكثافة</p>
+              <span class="ex-duration"><i class="fas fa-clock"></i> 20-30 دقيقة</span>
+            </div>
+          </div>
+          <div class="extra-ex-card" onclick="openExtraModal('yoga')">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&q=80" alt="yoga"/>
+            <div class="extra-ex-overlay">
+              <h4>يوغا</h4>
+              <p>مرونة وتوازن وتنفس</p>
+              <span class="ex-duration"><i class="fas fa-clock"></i> 30-45 دقيقة</span>
+            </div>
+          </div>
+          <div class="extra-ex-card" onclick="openExtraModal('swimming')">
+            <img src="https://images.unsplash.com/photo-1560090995-01632a28895b?w=300&q=80" alt="swimming"/>
+            <div class="extra-ex-overlay">
+              <h4>السباحة</h4>
+              <p>تمرين الجسم بالكامل</p>
+              <span class="ex-duration"><i class="fas fa-clock"></i> 30-60 دقيقة</span>
+            </div>
+          </div>
+          <div class="extra-ex-card" onclick="openExtraModal('cycling')">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80" alt="cycling"/>
+            <div class="extra-ex-overlay">
+              <h4>ركوب الدراجة</h4>
+              <p>كارديو منخفض التأثير</p>
+              <span class="ex-duration"><i class="fas fa-clock"></i> 45-60 دقيقة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hydration -->
+    <div class="note-section-block" data-aos="fade-up">
+      <div class="note-block-header" onclick="toggleNoteBlock(this)">
+        <div class="note-block-icon water-icon"><i class="fas fa-tint"></i></div>
+        <div class="note-block-info">
+          <h3>الترطيب والمياه</h3>
+          <p>الماء هو وقود عضلاتك</p>
+        </div>
+        <div class="note-block-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="note-block-body">
+        <div class="water-tracker">
+          <div class="water-bottle-visual">
+            <div class="water-bottle">
+              <div class="water-fill" id="waterFill" style="height:50%"></div>
+              <div class="water-level-text" id="waterLevelText">4 / 8 أكواب</div>
+            </div>
+          </div>
+          <div class="water-controls">
+            <h4>تتبع شرب الماء اليومي</h4>
+            <p>الهدف: 8 أكواب (2 لتر) يومياً</p>
+            <div class="water-cups" id="waterCups">
+              <div class="water-cup filled" onclick="toggleCup(this,0)"><i class="fas fa-glass-water"></i></div>
+              <div class="water-cup filled" onclick="toggleCup(this,1)"><i class="fas fa-glass-water"></i></div>
+              <div class="water-cup filled" onclick="toggleCup(this,2)"><i class="fas fa-glass-water"></i></div>
+              <div class="water-cup filled" onclick="toggleCup(this,3)"><i class="fas fa-glass-water"></i></div>
+              <div class="water-cup" onclick="toggleCup(this,4)"><i class="fas fa-glass-water"></i></div>
+              <div class="water-cup" onclick="toggleCup(this,5)"><i class="fas fa-glass-water"></i></div>
+              <div class="water-cup" onclick="toggleCup(this,6)"><i class="fas fa-glass-water"></i></div>
+              <div class="water-cup" onclick="toggleCup(this,7)"><i class="fas fa-glass-water"></i></div>
+            </div>
+            <div class="water-tips-list">
+              <p><i class="fas fa-droplet"></i> اشرب كوب ماء فور الاستيقاظ</p>
+              <p><i class="fas fa-droplet"></i> اشرب 500 مل قبل التمرين بساعة</p>
+              <p><i class="fas fa-droplet"></i> اشرب كل 15 دقيقة أثناء التمرين</p>
+              <p><i class="fas fa-droplet"></i> أضف ملح البحر لتعويض الأملاح المفقودة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mental Health -->
+    <div class="note-section-block" data-aos="fade-up">
+      <div class="note-block-header" onclick="toggleNoteBlock(this)">
+        <div class="note-block-icon mental-icon"><i class="fas fa-brain"></i></div>
+        <div class="note-block-info">
+          <h3>الصحة النفسية والتركيز</h3>
+          <p>العقل القوي يبني الجسم القوي</p>
+        </div>
+        <div class="note-block-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="note-block-body">
+        <div class="mental-grid">
+          <div class="mental-card"><div class="mental-icon-wrap"><i class="fas fa-meditation"></i></div><h4>التأمل</h4><p>10 دقائق صباحاً لتحضير العقل</p></div>
+          <div class="mental-card"><div class="mental-icon-wrap"><i class="fas fa-journal-whills"></i></div><h4>التسجيل اليومي</h4><p>سجل إنجازاتك وأهدافك</p></div>
+          <div class="mental-card"><div class="mental-icon-wrap"><i class="fas fa-music"></i></div><h4>الموسيقى</h4><p>موسيقى محفزة أثناء التمرين</p></div>
+          <div class="mental-card"><div class="mental-icon-wrap"><i class="fas fa-users"></i></div><h4>المجتمع</h4><p>تدرب مع شريك لمزيد من الحافز</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Injury Prevention -->
+    <div class="note-section-block" data-aos="fade-up">
+      <div class="note-block-header" onclick="toggleNoteBlock(this)">
+        <div class="note-block-icon injury-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="note-block-info">
+          <h3>الوقاية من الإصابات</h3>
+          <p>تمرن بذكاء لتتمرن طويلاً</p>
+        </div>
+        <div class="note-block-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="note-block-body">
+        <div class="injury-steps">
+          <div class="injury-step"><div class="step-num">01</div><div class="step-content"><h4>الإحماء الصحيح</h4><p>5-10 دقائق كارديو خفيف + تمارين ديناميكية قبل كل جلسة</p></div></div>
+          <div class="injury-step"><div class="step-num">02</div><div class="step-content"><h4>الشكل الصحيح</h4><p>الأولوية للتقنية الصحيحة قبل زيادة الأوزان</p></div></div>
+          <div class="injury-step"><div class="step-num">03</div><div class="step-content"><h4>التدرج في الأحمال</h4><p>زد الوزن 5-10% فقط كل أسبوع لتجنب الإجهاد</p></div></div>
+          <div class="injury-step"><div class="step-num">04</div><div class="step-content"><h4>التبريد والتمدد</h4><p>10 دقائق تمدد ثابت بعد كل جلسة</p></div></div>
+          <div class="injury-step"><div class="step-num">05</div><div class="step-content"><h4>الاستماع للجسم</h4><p>فرّق بين ألم العضلة الطبيعي وألم الإصابة</p></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== GALLERY ====== -->
+<section class="section gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">📸 GALLERY</span>
+      <h2 class="section-title">معرض الصور</h2>
+      <p class="section-desc">لحظات من عالم Slay GYM</p>
+    </div>
+    <div class="gallery-grid" data-aos="fade-up">
+      <div class="gallery-item big" onclick="openGallery(0)"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80" alt="gym1"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" onclick="openGallery(1)"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="gym2"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" onclick="openGallery(2)"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&q=80" alt="gym3"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" onclick="openGallery(3)"><img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80" alt="gym4"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" onclick="openGallery(4)"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&q=80" alt="gym5"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item big" onclick="openGallery(5)"><img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&q=80" alt="gym6"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" onclick="openGallery(6)"><img src="https://images.unsplash.com/photo-1530822847156-5df684ec5933?w=400&q=80" alt="gym7"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" onclick="openGallery(7)"><img src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=400&q=80" alt="gym8"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <button class="lb-prev" onclick="lbNav(event,-1)"><i class="fas fa-chevron-right"></i></button>
+  <button class="lb-next" onclick="lbNav(event,1)"><i class="fas fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt=""/>
+</div>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">⭐ REVIEWS</span>
+      <h2 class="section-title">قصص النجاح</h2>
+    </div>
+    <div class="testimonials-slider" data-aos="fade-up">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="test-img"><img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&q=80" alt="user"/></div>
+          <div class="test-stars">★★★★★</div>
+          <p>"خسرت 15 كيلو في 3 أشهر مع برنامج Slay GYM! أفضل قرار اتخذته في حياتي"</p>
+          <h5>أحمد محمد</h5><span>-12 كجم في 90 يوم</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-img"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="user"/></div>
+          <div class="test-stars">★★★★★</div>
+          <p>"النظام الغذائي والتمارين مع بعض أعطاني نتائج خيالية! البرنامج محترف جداً"</p>
+          <h5>سارة علي</h5><span>+8 كجم عضل نقي</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-img"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="user"/></div>
+          <div class="test-stars">★★★★★</div>
+          <p>"ربيع شرح كل شيء بدقة متناهية، من التمارين للأكل للنوم. موقع متكامل 100%"</p>
+          <h5>خالد العمري</h5><span>تحول كامل في 6 أشهر</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-img"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="user"/></div>
+          <div class="test-stars">★★★★★</div>
+          <p>"أخيراً برنامج باللغة العربية يستحق! تصميمه جميل ومحتواه قوي جداً"</p>
+          <h5>نورة الزهراني</h5><span>-18 كجم دهون</span>
+        </div>
+      </div>
+      <div class="testimonials-nav">
+        <button onclick="slideTestimonials(-1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="test-dots" id="testDots"></div>
+        <button onclick="slideTestimonials(1)"><i class="fas fa-chevron-left"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BMI CALCULATOR ====== -->
+<section class="section bmi-section">
+  <div class="container">
+    <div class="bmi-wrapper" data-aos="fade-up">
+      <div class="bmi-info">
+        <span class="section-tag">📊 BMI TOOL</span>
+        <h2>احسب مؤشر كتلة جسمك</h2>
+        <p>اعرف وضعك الحالي وابدأ رحلتك المناسبة</p>
+        <div class="bmi-scale">
+          <div class="bmi-scale-bar">
+            <div class="bmi-zone underweight">نحيف جداً<br/>< 18.5</div>
+            <div class="bmi-zone normal">طبيعي<br/>18.5-24.9</div>
+            <div class="bmi-zone overweight">زيادة<br/>25-29.9</div>
+            <div class="bmi-zone obese">سمنة<br/>> 30</div>
+          </div>
+          <div class="bmi-pointer" id="bmiPointer"></div>
+        </div>
+      </div>
+      <div class="bmi-calc-box">
+        <h3>أدخل بياناتك</h3>
+        <div class="bmi-inputs">
+          <div class="bmi-input-group">
+            <label>الوزن</label>
+            <div class="bmi-input-wrap">
+              <input type="number" id="bmiWeight" placeholder="70" min="30" max="300"/>
+              <span>كجم</span>
+            </div>
+          </div>
+          <div class="bmi-input-group">
+            <label>الطول</label>
+            <div class="bmi-input-wrap">
+              <input type="number" id="bmiHeight" placeholder="175" min="100" max="250"/>
+              <span>سم</span>
+            </div>
+          </div>
+        </div>
+        <button class="bmi-btn" onclick="calculateBMI()">احسب المؤشر</button>
+        <div class="bmi-result" id="bmiResult"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">📬 CONTACT</span>
+      <h2 class="section-title">تواصل معنا</h2>
+      <p class="section-desc">هل لديك سؤال؟ نحن هنا للمساعدة</p>
+    </div>
+    <div class="contact-wrapper" data-aos="fade-up">
+      <div class="contact-info">
+        <div class="contact-trainer">
+          <img src="https://images.unsplash.com/photo-1611672585731-fa10d931762e?w=200&q=80" alt="trainer"/>
+          <div>
+            <h3>ربيع Rabea</h3>
+            <p>مدرب لياقة بدنية معتمد</p>
+            <div class="trainer-badges"><span>✅ ISSA معتمد</span><span>✅ خبرة 8+ سنوات</span></div>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a href="#" class="contact-link instagram"><i class="fab fa-instagram"></i><span>@SlayGYM</span></a>
+          <a href="#" class="contact-link whatsapp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+          <a href="#" class="contact-link twitter"><i class="fab fa-twitter"></i><span>@SlayGYM</span></a>
+          <a href="#" class="contact-link youtube"><i class="fab fa-youtube"></i><span>Slay GYM Channel</span></a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <h3>أرسل رسالة</h3>
+        <div class="form-row">
+          <div class="form-group"><input type="text" placeholder="الاسم الكامل" required/></div>
+          <div class="form-group"><input type="email" placeholder="البريد الإلكتروني" required/></div>
+        </div>
+        <div class="form-group"><input type="text" placeholder="الموضوع"/></div>
+        <div class="form-group"><textarea placeholder="رسالتك..." rows="5" required></textarea></div>
+        <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
+        <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> تم إرسال رسالتك بنجاح!</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">SLAY<span>GYM</span></div>
+          <p>برنامج تدريبي متكامل صُمِّم بعناية لمساعدتك على تحقيق أهدافك الرياضية</p>
+          <p class="footer-credit">بواسطة <strong>ربيع Rabea</strong> © 2024</p>
+        </div>
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <a href="#home">الرئيسية</a>
+          <a href="#course">الكورس</a>
+          <a href="#nutrition">التغذية</a>
+          <a href="#notes">الملاحظات</a>
+          <a href="#gallery">المعرض</a>
+        </div>
+        <div class="footer-links">
+          <h4>البرامج</h4>
+          <a href="#course">بناء العضلات</a>
+          <a href="#course">حرق الدهون</a>
+          <a href="#nutrition">التغذية الرياضية</a>
+          <a href="#notes">تمارين الكارديو</a>
+        </div>
+        <div class="footer-newsletter">
+          <h4>اشترك في النشرة البريدية</h4>
+          <p>احصل على نصائح أسبوعية مجانية</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="بريدك الإلكتروني"/>
+            <button><i class="fas fa-arrow-left"></i></button>
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Slay GYM • بواسطة ربيع Rabea • جميع الحقوق محفوظة</p>
+    <p>صُنع بـ ❤️ لكل رياضي يسعى للأفضل</p>
+  </div>
+</footer>
+
+<!-- ====== BACK TO TOP ====== -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ====== SCRIPTS ====== -->
+<script>
+// ====== DATA ======
+const dayData = {
+  saturday: {
+    title: "الصدر والترايسبس",
+    day: "السبت",
+    img: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80",
+    color: "#ef4444",
+    warmup: "إحماء: 5 دقائق جري خفيف + دوران مفاصل",
+    exercises: [
+      {name:"بنش برس بالبار",sets:"4 × 8-10",rest:"90 ثانية",muscles:"صدر علوي وسفلي",tip:"أنزل البار ببطء 3 ثوان"},
+      {name:"بنش برس مائل بالدمبل",sets:"3 × 10-12",rest:"75 ثانية",muscles:"صدر علوي",tip:"أبقِ الكتف مثبتة"},
+      {name:"فلايز بالكابل",sets:"3 × 12-15",rest:"60 ثانية",muscles:"صدر داخلي",tip:"ركز على الضغط العضلي"},
+      {name:"ضغط إسفيني",sets:"3 × 10",rest:"60 ثانية",muscles:"ترايسبس وكتف",tip:"اضغط حتى قفل الكوع"},
+      {name:"ترايسبس بوشداون",sets:"4 × 12-15",rest:"60 ثانية",muscles:"ترايسبس كامل",tip:"أثبت كوعك بجانب جسمك"},
+      {name:"وول بوش",sets:"3 × فشل",rest:"45 ثانية",muscles:"صدر وكتف",tip:"جسمك مستقيم دائماً"}
+    ]
+  },
+  sunday: {
+    title: "الظهر والبايسبس",
+    day: "الأحد",
+    img: "https://images.unsplash.com/photo-1530822847156-5df684ec5933?w=800&q=80",
+    color: "#3b82f6",
+    warmup: "إحماء: 5 دقائق + تمدد الكتف والظهر العلوي",
+    exercises: [
+      {name:"ديدليفت",sets:"4 × 5-6",rest:"120 ثانية",muscles:"ظهر سفلي + فخذ",tip:"ظهرك مستقيم دائماً"},
+      {name:"تشناب واسع",sets:"4 × 6-8",rest:"90 ثانية",muscles:"عضلة لاتيسيموس",tip:"اشد من الكوع لا اليد"},
+      {name:"روينج بالبار",sets:"3 × 8-10",rest:"90 ثانية",muscles:"ظهر وسط وسفلي",tip:"اسحب نحو السرة"},
+      {name:"سيتد كيبل رو",sets:"3 × 10-12",rest:"75 ثانية",muscles:"ظهر وسط",tip:"لا تتأرجح للخلف"},
+      {name:"بايسبس كيرل بالبار",sets:"4 × 10-12",rest:"75 ثانية",muscles:"بايسبس",tip:"لا تحرك الكوع للأمام"},
+      {name:"هامر كيرل",sets:"3 × 12",rest:"60 ثانية",muscles:"بايسبس + براكياليس",tip:"حافظ على الإيقاع"},
+      {name:"كيبل فيس بول",sets:"3 × 15",rest:"60 ثانية",muscles:"خلفي كتف",tip:"اسحب نحو وجهك"}
+    ]
+  },
+  monday: {
+    title: "الأرجل والسمانة",
+    day: "الاثنين",
+    img: "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=800&q=80",
+    color: "#10b981",
+    warmup: "إحماء: دراجة ثابتة 5 دقائق + تمدد الفخذ",
+    exercises: [
+      {name:"سكوات بالبار",sets:"5 × 5-8",rest:"120 ثانية",muscles:"فخذ أمامي + مؤخرة",tip:"الركبة فوق الإصبع الصغير"},
+      {name:"ليج برس",sets:"4 × 10-12",rest:"90 ثانية",muscles:"فخذ كامل",tip:"لا تقفل الركبة"},
+      {name:"لانج متنقل",sets:"3 × 12 جانب",rest:"75 ثانية",muscles:"فخذ + مؤخرة",tip:"خطوة كبيرة للأمام"},
+      {name:"ليج كيرل",sets:"4 × 12-15",rest:"60 ثانية",muscles:"خلفي الفخذ",tip:"اثن الركبة بالكامل"},
+      {name:"ليج اكستنشن",sets:"3 × 15",rest:"60 ثانية",muscles:"أمامي الفخذ",tip:"اشعر بالضغط في القمة"},
+      {name:"هيب ثراست",sets:"4 × 10-12",rest:"90 ثانية",muscles:"مؤخرة كاملة",tip:"ضغط قوي في القمة"},
+      {name:"ستاندينج كاف ريز",sets:"4 × 20",rest:"45 ثانية",muscles:"سمانة خارجية",tip:"ارتفع على أطراف الأصابع"},
+      {name:"سيتد كاف ريز",sets:"4 × 20",rest:"45 ثانية",muscles:"سمانة داخلية",tip:"احرص على المدى الكامل"}
+    ]
+  },
+  tuesday: {
+    title: "الراحة النشطة",
+    day: "الثلاثاء",
+    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+    color: "#8b5cf6",
+    warmup: "يوم استرداد وتمدد",
+    exercises: [
+      {name:"مشي خفيف",sets:"20-30 دقيقة",rest:"حسب الحاجة",muscles:"قلب وأوعية دموية",tip:"وتيرة مريحة"},
+      {name:"تمدد الصدر",sets:"3 × 30 ثانية",rest:"30 ثانية",muscles:"صدر وكتف",tip:"تنفس عميق"},
+      {name:"تمدد الظهر - قطة والبقرة",sets:"3 × 15 تكرار",rest:"30 ثانية",muscles:"عمود فقري",tip:"حركة بطيئة"},
+      {name:"تمدد الفخذ",sets:"3 × 30 ثانية كل جانب",rest:"20 ثانية",muscles:"أمامي الفخذ",tip:"استند على الحائط"},
+      {name:"تمدد الهامستر",sets:"3 × 30 ثانية",rest:"20 ثانية",muscles:"خلفي الفخذ",tip:"لا تثني الركبة"},
+      {name:"تدليك بالرول",sets:"5 دقائق لكل منطقة",rest:"حسب الحاجة",muscles:"كل الجسم",tip:"توقف عند المناطق المتألمة"}
+    ]
+  },
+  wednesday: {
+    title: "الكتف والرقبة",
+    day: "الأربعاء",
+    img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80",
+    color: "#f59e0b",
+    warmup: "إحماء: دوران الكتف 2 دقيقة + حمل خفيف",
+    exercises: [
+      {name:"أوفر هيد برس",sets:"4 × 8-10",rest:"90 ثانية",muscles:"كتف أمامي وجانبي",tip:"لا تقوس ظهرك"},
+      {name:"لاترال ريز",sets:"4 × 12-15",rest:"60 ثانية",muscles:"كتف جانبي",tip:"المرفق أعلى من اليد"},
+      {name:"فرنت ريز",sets:"3 × 12",rest:"60 ثانية",muscles:"كتف أمامي",tip:"لا ترفع أعلى من الكتف"},
+      {name:"ريير ديلت فلايز",sets:"4 × 15",rest:"60 ثانية",muscles:"خلفي الكتف",tip:"ظهرك مستقيم"},
+      {name:"فيس بول بالحبل",sets:"3 × 15",rest:"60 ثانية",muscles:"خلفي كتف + علوي ظهر",tip:"اسحب نحو الأنف"},
+      {name:"شراجز",sets:"3 × 12",rest:"60 ثانية",muscles:"الترابيزيوس",tip:"ارفع عمودياً فقط"}
+    ]
+  },
+  thursday: {
+    title: "الكارديو والبطن",
+    day: "الخميس",
+    img: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80",
+    color: "#ec4899",
+    warmup: "إحماء: 3 دقائق قفز خفيف",
+    exercises: [
+      {name:"HIIT على السير",sets:"20 دقيقة تناوب",rest:"لا راحة",muscles:"قلب ورئة",tip:"30 ث سريع / 90 ث هادئ"},
+      {name:"كرانش عادي",sets:"4 × 20",rest:"30 ثانية",muscles:"بطن علوي",tip:"لا تسحب الرقبة"},
+      {name:"ليج ريز",sets:"4 × 15",rest:"45 ثانية",muscles:"بطن سفلي",tip:"ظهرك ملاصق للأرض"},
+      {name:"بلانك",sets:"4 × 45 ثانية",rest:"30 ثانية",muscles:"كور كامل",tip:"جسمك خط مستقيم"},
+      {name:"روسيان تويست",sets:"3 × 20",rest:"30 ثانية",muscles:"جوانب البطن",tip:"ارفع قدميك للأعلى"},
+      {name:"مانتن كلايمبر",sets:"4 × 30 ثانية",rest:"30 ثانية",muscles:"كور + قلب",tip:"وتيرة سريعة"},
+      {name:"بيسايكل كرانش",sets:"3 × 20 جانب",rest:"30 ثانية",muscles:"بطن مائل",tip:"الكوع نحو الركبة"},
+      {name:"هايبر اكستنشن",sets:"3 × 15",rest:"45 ثانية",muscles:"أسفل الظهر",tip:"لا ترفع أكثر من 45 درجة"},
+      {name:"جمب رووب",sets:"3 × 3 دقائق",rest:"60 ثانية",muscles:"قلب + سمانة",tip:"قفز منتظم"}
+    ]
+  },
+  friday: {
+    title: "الجمعة — الراحة التامة",
+    day: "الجمعة",
+    img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+    color: "#6366f1",
+    warmup: "لا تمرين اليوم!",
+    exercises: [
+      {name:"نوم 8 ساعات",sets:"ضروري",rest:"—",muscles:"جسم كامل",tip:"أقدم أولوية للنوم الجيد"},
+      {name:"تغذية عالية البروتين",sets:"كل الوجبات",rest:"—",muscles:"استشفاء عضلي",tip:"1.8-2.2 جرام / كجم وزن جسم"},
+      {name:"مشي هادئ 20 دقيقة",sets:"اختياري",rest:"—",muscles:"دوران دم",tip:"في الطبيعة إن أمكن"},
+      {name:"تدليك وتمدد خفيف",sets:"15 دقيقة",rest:"—",muscles:"كل الجسم",tip:"اهتم بالمناطق المتألمة"},
+      {name:"الإعداد للأسبوع القادم",sets:"ذهنياً",rest:"—",muscles:"عقل وجسم",tip:"راجع أهدافك وخططك"}
+    ]
+  }
+};
+
+const mealData = {
+  breakfast1: {
+    title: "فطور البطل",
+    type: "breakfast",
+    img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80",
+    calories: 520, protein: 35, carbs: 45, fat: 18,
+    prepTime: "15 دقيقة",
+    ingredients: [
+      {name:"بيض كامل",amount:"3 بيضات",icon:"🥚"},
+      {name:"بياض البيض",amount:"2 بيضة",icon:"🥚"},
+      {name:"شوفان",amount:"80 جرام",icon:"🥣"},
+      {name:"موز",amount:"1 حبة",icon:"🍌"},
+      {name:"عسل طبيعي",amount:"1 ملعقة صغيرة",icon:"🍯"},
+      {name:"حليب لوز",amount:"200 مل",icon:"🥛"},
+      {name:"مكسرات مشكلة",amount:"30 جرام",icon:"🥜"}
+    ],
+    steps: [
+      "اطبخ الشوفان بحليب اللوز على نار هادئة مع التحريك",
+      "أضف الموز المهروس والعسل للشوفان",
+      "اخفق البيض وبياض البيض واطبخه بدون زيت على مقلاة نون ستيك",
+      "رش المكسرات فوق الشوفان",
+      "قدم الأطباق معاً في وعاء واحد للجمال"
+    ],
+    notes: "⚡ هذه الوجبة تمنحك طاقة ثابتة لساعات. يمكن استبدال الشوفان بكينوا للحصول على مزيد من البروتين."
+  },
+  snack1: {
+    title: "وجبة ما قبل التمرين",
+    type: "snack",
+    img: "https://images.unsplash.com/photo-1517093602195-b40af9929bca?w=600&q=80",
+    calories: 280, protein: 20, carbs: 35, fat: 6,
+    prepTime: "5 دقائق",
+    ingredients: [
+      {name:"تفاح",amount:"1 حبة كبيرة",icon:"🍎"},
+      {name:"زبدة فول سوداني",amount:"2 ملعقة كبيرة",icon:"🥜"},
+      {name:"بروتين شيك",amount:"1 سيرفينج",icon:"🥤"},
+      {name:"كافيين (قهوة/سبلمنت)",amount:"200 ملج",icon:"☕"}
+    ],
+    steps: [
+      "تناول الكافيين قبل 30 دقيقة من التمرين",
+      "اقطع التفاح شرائح وأضف زبدة الفول سوداني",
+      "احضر البروتين شيك مع الماء أو الحليب",
+      "تناول كل شيء قبل 45-60 دقيقة من التمرين"
+    ],
+    notes: "⚡ هذه الوجبة مثالية للطاقة السريعة. لا تأكل وجبة ثقيلة قبل التمرين بأقل من ساعة!"
+  },
+  lunch1: {
+    title: "غداء البناء العضلي",
+    type: "lunch",
+    img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
+    calories: 680, protein: 55, carbs: 65, fat: 20,
+    prepTime: "25 دقيقة",
+    ingredients: [
+      {name:"صدر دجاج",amount:"200 جرام",icon:"🍗"},
+      {name:"أرز بسمتي",amount:"150 جرام مطبوخ",icon:"🍚"},
+      {name:"خضار مشكلة مشوية",amount:"200 جرام",icon:"🥦"},
+      {name:"زيت زيتون",amount:"1 ملعقة كبيرة",icon:"🫒"},
+      {name:"ثوم + بهارات",amount:"حسب الذوق",icon:"🧄"},
+      {name:"عصير ليمون",amount:"نصف حبة",icon:"🍋"}
+    ],
+    steps: [
+      "تبّل صدر الدجاج بالثوم والبهارات وعصير الليمون",
+      "اشوِ الدجاج 6-7 دقائق كل جانب على شواية أو مقلاة",
+      "اطبخ الأرز بكمية مناسبة من الماء والملح",
+      "اشوِ الخضار بزيت الزيتون في الفرن 200° لمدة 20 دقيقة",
+      "رتّب الطبق بشكل جميل وقدمه ساخناً"
+    ],
+    notes: "💪 هذه هي الوجبة الرئيسية في يومك. الدجاج المشوي أفضل من المقلي للحفاظ على البروتين الصافي."
+  },
+  snack2: {
+    title: "سموذي البروتين",
+    type: "snack",
+    img: "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=600&q=80",
+    calories: 340, protein: 30, carbs: 40, fat: 8,
+    prepTime: "5 دقائق",
+    ingredients: [
+      {name:"موز مجمد",amount:"1 حبة",icon:"🍌"},
+      {name:"بروتين شوكولاتة",amount:"30 جرام",icon:"🍫"},
+      {name:"حليب لوز",amount:"250 مل",icon:"🥛"},
+      {name:"زبدة فول سوداني",amount:"1 ملعقة كبيرة",icon:"🥜"},
+      {name:"مكعبات ثلج",amount:"5-6 مكعبات",icon:"🧊"},
+      {name:"كاكاو طبيعي",amount:"1 ملعقة صغيرة",icon:"🍫"}
+    ],
+    steps: [
+      "ضع كل المكونات في الخلاط",
+      "اخلط على سرعة عالية لمدة 60 ثانية",
+      "أضف ثلج إضافي إذا أردت قواماً أكثر كثافة",
+      "قدّمه فوراً بالستراو لأفضل نكهة"
+    ],
+    notes: "🔥 أفضل وقت له: بعد التمرين مباشرة أو كوجبة بين الغداء والعشاء."
+  },
+  dinner1: {
+    title: "عشاء الاسترداد",
+    type: "dinner",
+    img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80",
+    calories: 480, protein: 45, carbs: 30, fat: 18,
+    prepTime: "20 دقيقة",
+    ingredients: [
+      {name:"سمك سالمون",amount:"180 جرام",icon:"🐟"},
+      {name:"بطاطا حلوة",amount:"150 جرام",icon:"🍠"},
+      {name:"سبانخ طازجة",amount:"100 جرام",icon:"🥬"},
+      {name:"زيت جوز الهند",amount:"1 ملعقة صغيرة",icon:"🫙"},
+      {name:"ليمون + إكليل الجبل",amount:"حسب الذوق",icon:"🌿"},
+      {name:"ثوم مفروم",amount:"2 فص",icon:"🧄"}
+    ],
+    steps: [
+      "سخن الفرن على 200 درجة",
+      "ضع السالمون على ورق قصدير وأضف التوابل والليمون",
+      "اشوِ السالمون 15-18 دقيقة في الفرن",
+      "اطبخ البطاطا الحلوة في الميكروويف 5-6 دقائق",
+      "قلّب السبانخ بالثوم والزيت لمدة دقيقتين",
+      "رتب الطبق بشكل أنيق وقدمه دافئاً"
+    ],
+    notes: "🌙 السالمون غني بالأوميجا 3 التي تساعد على تعافي العضلات أثناء النوم. تجنب الكربوهيدرات الثقيلة في العشاء."
+  },
+  snack3: {
+    title: "وجبة ما قبل النوم",
+    type: "snack",
+    img: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=600&q=80",
+    calories: 200, protein: 25, carbs: 15, fat: 5,
+    prepTime: "3 دقائق",
+    ingredients: [
+      {name:"جبن قريش/كوتج تشيز",amount:"150 جرام",icon:"🧀"},
+      {name:"عسل طبيعي",amount:"1 ملعقة صغيرة",icon:"🍯"},
+      {name:"قرفة",amount:"رشة صغيرة",icon:"🌶️"},
+      {name:"جوز",amount:"10 جرام",icon:"🪙"}
+    ],
+    steps: [
+      "ضع الجبن في وعاء صغير",
+      "أضف العسل والقرفة والجوز فوقه",
+      "تناوله هادئاً قبل 30-60 دقيقة من النوم"
+    ],
+    notes: "💤 الجبن القريش يحتوي على كازيين، بروتين بطيء الهضم يغذي عضلاتك طوال الليل!"
+  }
+};
+
+const galleryImgs = [
+  "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=90",
+  "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=90",
+  "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1200&q=90",
+  "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1200&q=90",
+  "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=90",
+  "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=1200&q=90",
+  "https://images.unsplash.com/photo-1530822847156-5df684ec5933?w=1200&q=90",
+  "https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?w=1200&q=90"
+];
+
+let lbIndex = 0;
+let testIndex = 0;
+let waterCount = 4;
+
+// ====== LOADER ======
+window.addEventListener('load', () => {
+  let pct = 0;
+  const fill = document.getElementById('loaderFill');
+  const pctEl = document.getElementById('loaderPercent');
+  const interval = setInterval(() => {
+    pct += Math.random() * 15;
+    if (pct >= 100) { pct = 100; clearInterval(interval); setTimeout(hideLoader, 400); }
+    fill.style.width = pct + '%';
+    pctEl.textContent = Math.floor(pct) + '%';
+  }, 80);
+});
+
+function hideLoader() {
+  const loader = document.getElementById('loader');
+  loader.classList.add('hide');
+  setTimeout(() => loader.style.display = 'none', 600);
+  initAnimations();
+  initStats();
+  initTestimonials();
+  initProgressBars();
+}
+
+// ====== CURSOR ======
+const cursor = document.getElementById('cursor');
+const trail = document.getElementById('cursorTrail');
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  setTimeout(() => { trail.style.left = e.clientX + 'px'; trail.style.top = e.clientY + 'px'; }, 80);
+});
+document.querySelectorAll('a,button,.day-card,.meal-card,.gallery-item').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+});
+
+// ====== NAVBAR ======
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+  document.getElementById('backToTop').classList.toggle('show', window.scrollY > 400);
+});
+
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+  this.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+// Theme toggle
+document.getElementById('themeToggle').addEventListener('click', function() {
+  document.body.classList.toggle('light-mode');
+  this.innerHTML = document.body.classList.contains('light-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+});
+
+// ====== PARTICLES ======
+function createParticles() {
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*4+1}px;height:${Math.random()*4+1}px;animation-delay:${Math.random()*5}s;animation-duration:${Math.random()*10+10}s`;
+    container.appendChild(p);
+  }
+}
+createParticles();
+
+// ====== STATS COUNTER ======
+function initStats() {
+  document.querySelectorAll('.stat-num').forEach(el => {
+    const target = +el.dataset.target;
+    let curr = 0;
+    const step = target / 60;
+    const timer = setInterval(() => {
+      curr += step;
+      if (curr >= target) { curr = target; clearInterval(timer); }
+      el.textContent = Math.floor(curr);
+    }, 30);
+  });
+}
+
+// ====== PROGRESS BARS ======
+function initProgressBars() {
+  document.querySelectorAll('.progress-bar-fill').forEach(bar => {
+    setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 500);
+  });
+}
+
+// ====== SCROLL ANIMATIONS ======
+function initAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+}
+
+// ====== SCROLL HELPER ======
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ====== DAY MODAL ======
+function openDayModal(day) {
+  const d = dayData[day];
+  if (!d) return;
+  document.getElementById('modalHeader').innerHTML = `
+    <div class="modal-day-header" style="background-image:url('${d.img}')">
+      <div class="modal-day-overlay" style="background:${d.color}33"></div>
+      <div class="modal-day-title">
+        <span class="modal-day-tag" style="background:${d.color}">${d.day}</span>
+        <h2>${d.title}</h2>
+        <p><i class="fas fa-fire"></i> ${d.exercises.length} تمارين</p>
+      </div>
+    </div>`;
+  let exercisesHtml = d.exercises.map((ex,i) => `
+    <div class="modal-exercise-card">
+      <div class="ex-num" style="background:${d.color}">${String(i+1).padStart(2,'0')}</div>
+      <div class="ex-details">
+        <h4>${ex.name}</h4>
+        <div class="ex-meta">
+          <span><i class="fas fa-repeat"></i> ${ex.sets}</span>
+          <span><i class="fas fa-clock"></i> راحة: ${ex.rest}</span>
+          <span><i class="fas fa-dumbbell"></i> ${ex.muscles}</span>
+        </div>
+        <div class="ex-tip"><i class="fas fa-lightbulb"></i> ${ex.tip}</div>
+      </div>
+    </div>`).join('');
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-warmup"><i class="fas fa-fire"></i> ${d.warmup}</div>
+    <div class="modal-exercises-list">${exercisesHtml}</div>`;
+  document.getElementById('dayModal').classList.add('active');
+}
+
+function closeDayModal(e) {
+  if (!e || e.target === document.getElementById('dayModal')) {
+    document.getElementById('dayModal').classList.remove('active');
+  }
+}
+
+// ====== MEAL MODAL ======
+function openMealModal(id) {
+  const m = mealData[id];
+  if (!m) return;
+  document.getElementById('mealModalHeader').innerHTML = `
+    <div class="modal-meal-header" style="background-image:url('${m.img}')">
+      <div class="modal-meal-overlay"></div>
+      <div class="modal-meal-title">
+        <h2>${m.title}</h2>
+        <div class="meal-header-macros">
+          <span><i class="fas fa-fire"></i> ${m.calories} كالوري</span>
+          <span><i class="fas fa-drumstick-bite"></i> ${m.protein}ج بروتين</span>
+          <span><i class="fas fa-bread-slice"></i> ${m.carbs}ج كارب</span>
+          <span><i class="fas fa-fish"></i> ${m.fat}ج دهون</span>
+        </div>
+        <span><i class="fas fa-clock"></i> وقت التحضير: ${m.prepTime}</span>
+      </div>
+    </div>`;
+  let ingHtml = m.ingredients.map(ing => `<div class="ing-item"><span class="ing-icon">${ing.icon}</span><span class="ing-name">${ing.name}</span><span class="ing-amount">${ing.amount}</span></div>`).join('');
+  let stepsHtml = m.steps.map((s,i) => `<div class="recipe-step"><div class="step-circle">${i+1}</div><p>${s}</p></div>`).join('');
+  document.getElementById('mealModalBody').innerHTML = `
+    <div class="meal-modal-grid">
+      <div>
+        <h3><i class="fas fa-list"></i> المكونات</h3>
+        <div class="ingredients-list">${ingHtml}</div>
+      </div>
+      <div>
+        <h3><i class="fas fa-utensils"></i> طريقة التحضير</h3>
+        <div class="recipe-steps">${stepsHtml}</div>
+        <div class="meal-note">${m.notes}</div>
+      </div>
+    </div>`;
+  document.getElementById('mealModal').classList.add('active');
+}
+
+function closeMealModal(e) {
+  if (!e || e.target === document.getElementById('mealModal')) {
+    document.getElementById('mealModal').classList.remove('active');
+  }
+}
+
+// ====== MEAL FILTER ======
+function filterMeals(btn, type) {
+  document.querySelectorAll('.meal-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.meal-card').forEach(card => {
+    card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none';
+  });
+}
+
+// ====== CALORIE CALC ======
+function calculateCalories() {
+  const w = +document.getElementById('calcWeight').value || 70;
+  const h = +document.getElementById('calcHeight').value || 175;
+  const a = +document.getElementById('calcAge').value || 25;
+  const g = document.getElementById('calcGender').value;
+  const act = +document.getElementById('calcActivity').value;
+  const goal = document.getElementById('calcGoal').value;
+  let bmr = g === 'male' ? 10*w + 6.25*h - 5*a + 5 : 10*w + 6.25*h - 5*a - 161;
+  let tdee = bmr * act;
+  let target = goal === 'lose' ? tdee - 500 : goal === 'gain' ? tdee + 400 : tdee;
+  document.getElementById('calcResult').innerHTML = `
+    <div class="calc-result-grid">
+      <div class="calc-res-item"><span>${Math.round(bmr)}</span><p>BMR (معدل الأيض الأساسي)</p></div>
+      <div class="calc-res-item highlight"><span>${Math.round(tdee)}</span><p>TDEE (احتياجك اليومي)</p></div>
+      <div class="calc-res-item target"><span>${Math.round(target)}</span><p>هدفك اليومي</p></div>
+    </div>`;
+}
+
+// ====== BMI CALC ======
+function calculateBMI() {
+  const w = +document.getElementById('bmiWeight').value;
+  const h = +document.getElementById('bmiHeight').value / 100;
+  if (!w || !h) return;
+  const bmi = (w / (h * h)).toFixed(1);
+  let category, color, advice;
+  if (bmi < 18.5) { category = 'نحيف جداً'; color = '#3b82f6'; advice = 'تحتاج لزيادة وزنك بشكل صحي من خلال تناول كميات أكبر من البروتين والكربوهيدرات'; }
+  else if (bmi < 25) { category = 'وزن طبيعي ✅'; color = '#10b981'; advice = 'أنت في وضع ممتاز! حافظ على نمط حياتك الصحي'; }
+  else if (bmi < 30) { category = 'زيادة في الوزن'; color = '#f59e0b'; advice = 'يُنصح بتقليل السعرات بـ300-500 والتركيز على الكارديو'; }
+  else { category = 'سمنة'; color = '#ef4444'; advice = 'ابدأ برنامج Slay GYM فوراً مع نظام غذائي محدد'; }
+  const pct = Math.min(((bmi - 15) / 25) * 100, 100);
+  document.getElementById('bmiPointer').style.left = pct + '%';
+  document.getElementById('bmiPointer').style.display = 'block';
+  document.getElementById('bmiResult').innerHTML = `
+    <div class="bmi-res-box" style="border-color:${color}">
+      <div class="bmi-res-num" style="color:${color}">${bmi}</div>
+      <div class="bmi-res-cat" style="color:${color}">${category}</div>
+      <p class="bmi-res-advice">${advice}</p>
+    </div>`;
+}
+
+// ====== WATER TRACKER ======
+function toggleCup(cup, idx) {
+  const cups = document.querySelectorAll('.water-cup');
+  const filled = [...cups].filter(c => c.classList.contains('filled')).length;
+  const isFilled = cup.classList.contains('filled');
+  if (!isFilled) { for (let i = 0; i <= idx; i++) cups[i].classList.add('filled'); }
+  else { for (let i = idx; i < 8; i++) cups[i].classList.remove('filled'); }
+  waterCount = [...document.querySelectorAll('.water-cup')].filter(c => c.classList.contains('filled')).length;
+  document.getElementById('waterFill').style.height = (waterCount / 8 * 100) + '%';
+  document.getElementById('waterLevelText').textContent = waterCount + ' / 8 أكواب';
+}
+
+// ====== NOTE BLOCK TOGGLE ======
+function toggleNoteBlock(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.note-block-arrow i');
+  body.classList.toggle('active');
+  arrow.style.transform = body.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+}
+
+// ====== GALLERY ======
+function openGallery(idx) {
+  lbIndex = idx;
+  document.getElementById('lbImg').src = galleryImgs[idx];
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+function lbNav(e, dir) {
+  e.stopPropagation();
+  lbIndex = (lbIndex + dir + galleryImgs.length) % galleryImgs.length;
+  document.getElementById('lbImg').src = galleryImgs[lbIndex];
+}
+
+// ====== TESTIMONIALS ======
+function initTestimonials() {
+  const cards = document.querySelectorAll('.testimonial-card');
+  const dots = document.getElementById('testDots');
+  cards.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'test-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToTest(i);
+    dots.appendChild(dot);
+  });
+}
+function slideTestimonials(dir) {
+  const cards = document.querySelectorAll('.testimonial-card');
+  testIndex = (testIndex + dir + cards.length) % cards.length;
+  goToTest(testIndex);
+}
+function goToTest(idx) {
+  testIndex = idx;
+  document.getElementById('testimonialsTrack').style.transform = `translateX(${idx * 100}%)`;
+  document.querySelectorAll('.test-dot').forEach((d,i) => d.classList.toggle('active', i===idx));
+}
+
+// ====== WEEK SELECT ======
+function selectWeek(btn, week) {
+  document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// ====== EXTRA MODAL ======
+const extraData = {
+  hiit: { title:'HIIT', desc:'تدريب متقطع عالي الكثافة يحرق الدهون بسرعة', steps:['إحماء 3 دقائق','30 ثانية تمرين شديد (برجيز/جمبينج جاكس)','90 ثانية راحة نشطة','كرر 8-10 مرات','تبريد 3 دقائق'], benefit:'يحرق ضعف السعرات مقارنة بالكارديو العادي' },
+  yoga: { title:'اليوغا', desc:'تمارين مرونة وتوازن لتحسين الأداء وتجنب الإصابات', steps:['تنفس ديافراغمي 2 دقيقة','وضعية الكلب المنحدر','وضعية المحارب','وضعية الجسر','تمدد العمود الفقري'], benefit:'تحسن المرونة وتقلل خطر الإصابات بنسبة 60%' },
+  swimming: { title:'السباحة', desc:'تمرين الجسم بالكامل بدون ضغط على المفاصل', steps:['سباحة حرة 10 أطوال','راحة 2 دقيقة','سباحة ظهر 5 أطوال','سباحة صدر 5 أطوال','تمدد في الماء'], benefit:'تحرق 400-700 سعرة في ساعة واحدة' },
+  cycling: { title:'ركوب الدراجة', desc:'كارديو ممتاز لصحة القلب وحرق الدهون', steps:['إحماء 5 دقائق بتيرة هادئة','20 دقيقة بتيرة متوسطة','10 دقائق تدخل للمناطق الحضرية','20 دقيقة تبادل سرعة','تبريد 5 دقائق'], benefit:'يقوي عضلات الأرجل ويحسن صحة القلب' }
+};
+function openExtraModal(type) {
+  const d = extraData[type];
+  const html = `<div class="extra-modal-content"><h2>${d.title}</h2><p>${d.desc}</p><h4>خطوات التمرين:</h4><ul>${d.steps.map(s=>`<li>${s}</li>`).join('')}</ul><div class="extra-benefit"><i class="fas fa-star"></i> ${d.benefit}</div></div>`;
+  document.getElementById('modalHeader').innerHTML = '';
+  document.getElementById('modalBody').innerHTML = html;
+  document.getElementById('dayModal').classList.add('active');
+}
+
+// ====== FORM SUBMIT ======
+function submitForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+  btn.disabled = true;
+  setTimeout(() => {
+    document.getElementById('formSuccess').classList.add('show');
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+    btn.disabled = false;
+    e.target.reset();
+    setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 4000);
+  }, 1500);
+}
+</script>
+</body>
+</html>
